@@ -111,6 +111,7 @@ html.lenis {
     left: calc(50% - var(--circle-size) / 2);
     transform-origin: center center;
     animation: moveVertical 30s ease infinite;
+    animation-delay: var(--delay-g1, 0s); 
 }
 
 .g2 {
@@ -121,6 +122,7 @@ html.lenis {
     left: calc(50% - var(--circle-size) / 2);
     transform-origin: calc(50% - 20.83vw);
     animation: moveInCircle 20s reverse infinite;
+    animation-delay: var(--delay-g2, 0s);
 }
 
 .g3 {
@@ -131,6 +133,7 @@ html.lenis {
     left: calc(50% - var(--circle-size) / 2 - 26.04vw);
     transform-origin: calc(50% + 20.83vw);
     animation: moveInCircle 40s linear infinite;
+    animation-delay: var(--delay-g3, 0s);
 }
 
 .g4 {
@@ -142,6 +145,7 @@ html.lenis {
     transform-origin: calc(50% - 10.42vw);
     animation: moveHorizontal 40s ease infinite;
     opacity: 0.7;
+    animation-delay: var(--delay-g4, 0s);
 }
 
 .g5 {
@@ -152,6 +156,7 @@ html.lenis {
     left: calc(50% - var(--circle-size));
     transform-origin: calc(50% - 41.67vw) calc(50% + 18.5vh);
     animation: moveInCircle 20s ease infinite;
+    animation-delay: var(--delay-g5, 0s);
 }
 
 .interactive {
@@ -379,4 +384,3 @@ html.lenis {
 .hero-links a:hover .arrow-icon {
     opacity: 0.7;
 }
-

@@ -29,6 +29,22 @@
     <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
 
+    <script>
+        (function() {
+            const now = Date.now();
+            function setSyncDelay(variableName, durationSeconds) {
+                const durationMs = durationSeconds * 1000;
+                const offset = -((now % durationMs) / 1000);
+                document.documentElement.style.setProperty(variableName, `${offset}s`);
+            }
+            setSyncDelay('--delay-g1', 30);
+            setSyncDelay('--delay-g2', 20);
+            setSyncDelay('--delay-g3', 40);
+            setSyncDelay('--delay-g4', 40);
+            setSyncDelay('--delay-g5', 20);
+        })();
+    </script>
+
     <link rel="icon" href="assets/images/logo.png">
 </head>
 

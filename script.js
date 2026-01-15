@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const texts = ["kadri24", "Welcome"];
+const texts = ["kadri24", "welcome"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -152,25 +152,5 @@ document.querySelectorAll('.scroll-reveal-item').forEach(item => {
         filter: "blur(0px)",
         duration: 1,
         ease: "power3.out",
-    });
-});
-
-window.addEventListener('load', () => {
-    const now = new Date();
-    const ms = now.getHours() * 3600000 + now.getMinutes() * 60000 + now.getSeconds() * 1000 + now.getMilliseconds();
-
-    const animations = [
-        {selector: '.g1', duration: 30000},
-        {selector: '.g2', duration: 20000},
-        {selector: '.g3', duration: 40000},
-        {selector: '.g4', duration: 40000},
-        {selector: '.g5', duration: 20000},
-    ];
-
-    animations.forEach(anim => {
-        const el = document.querySelector(anim.selector);
-        if (!el) return;
-        const progress = (ms % anim.duration) / anim.duration;
-        el.style.animationDelay = `-${progress * anim.duration}ms`;
     });
 });
